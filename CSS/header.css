@@ -1,0 +1,15 @@
+.header {
+    max-width: 1000px;
+    background-color: #d1d1d1ea;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 25px;
+    margin: 20px auto;
+    color: #128b12;
+}
+
+.header__title {
+    font-weight: normal;
+    letter-spacing: 0.5em;
+    font-size: 40px;
+}

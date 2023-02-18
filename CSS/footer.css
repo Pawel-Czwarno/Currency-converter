@@ -1,0 +1,36 @@
+.footer {
+    background-color: #d1d1d1ea;
+    font-size: 15px;
+    color: #128b12;
+    border-radius: 25px;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 0.2em;
+}
+
+.footer__element {
+    border-left: 1px solid #128b12;
+    padding-left: 10px;
+    margin: 40px 0;
+}
+
+.footer__link {
+    color: #128b12;
+    text-decoration: none;
+    cursor: pointer;
+    border-left: 1px solid #128b12;
+    padding-left: 10px;
+}
+
+.footer__link:hover {
+    color: #7ffdd5;
+}
+
+.footer__link--git {
+    max-width: 30px;
+    max-height: 30px;
+    color: #128b12;
+}
