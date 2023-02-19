@@ -8,6 +8,9 @@ html {
 
 .body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url(https://images.pexels.com/photos/106152/euro-coins-currency-money-106152.jpeg);
-    background-color: #35e400c7;
+    background-image: url(../images/currency_background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }

@@ -26,11 +26,10 @@
 }
 
 .footer__link:hover {
-    color: #7ffdd5;
+    border-bottom: 1px solid #128b12;
 }
 
 .footer__link--git {
     max-width: 30px;
     max-height: 30px;
-    color: #128b12;
 }
