@@ -2,6 +2,10 @@
 
 This project is a currency converter. It allows to convert polish Zloty to 5 other currencies.
 
+## Link
+
+[Currency converter](https://pawel-czwarno.github.io/currency-converter/)
+
 ## Author
 
 [Paweł Czwarno](https://github.com/Pawel-Czwarno)
