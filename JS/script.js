@@ -1,43 +1,55 @@
-console.log("Witaj w kalkulatorze walutowym stworzonym przez Pawła Czwarno!");
-
-let formElement = document.querySelector(".js-currencyForm");
-let outElement = document.querySelector(".js-currencyOut");
-let askedElement = document.querySelector(".js-currencyAsked");
-let resultElement = document.querySelector(".js-currencyResult");
-let USD = 4.42;
-let EURO = 4.72;
-let UAH = 0.12;
-let POUND = 5.39;
-let CHF = 4.83;
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let result;
-    let asked = askedElement.value;
-    let currency = outElement.value;
-
-    switch (currency) {
-        case "$":
-            result = asked / USD;
-            break;
-
-        case "€":
-            result = asked / EURO;
-            break;
-
-        case "₴":
-            result = asked / UAH;
-            break;
-
-        case "£":
-            result = asked / POUND;
-            break;
-
-        case "CHF":
-            result = asked / CHF;
-            break;
+{
+    const welcome = () => {
+        console.log("Witaj w kalkulatorze walutowym stworzonym przez Pawła Czwarno!");
     };
 
-    resultElement.value = `${result.toFixed(2)} ${currency}`;
-});
+    const calculateResult = (asked, currency) => {
+        const USD = 4.42;
+        const EURO = 4.72;
+        const UAH = 0.12;
+        const POUND = 5.39;
+        const CHF = 4.83;
+
+        switch (currency) {
+            case "$":
+                return asked / USD;
+
+            case "€":
+                return asked / EURO;
+
+            case "₴":
+                return asked / UAH;
+
+            case "£":
+                return asked / POUND;
+
+            case "CHF":
+                return asked / CHF;
+        };
+    };
+
+    const showCurrencyResult = (result, currency) => {
+        const resultElement = document.querySelector(".js-currencyResult");
+        resultElement.value = `${result.toFixed(2)} ${currency}`;
+    };
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const outElement = document.querySelector(".js-currencyOut");
+        const askedElement = document.querySelector(".js-currencyAsked");
+        const asked = askedElement.value;
+        const currency = outElement.value;
+
+        let result = calculateResult(asked, currency);
+        showCurrencyResult (result, currency);
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-currencyForm");
+        formElement.addEventListener("submit", onFormSubmit);
+        welcome();
+    }
+
+    init();
+}
